@@ -1,0 +1,11 @@
+{{ if .Values.redis.enabled }}
+apiVersion: getambassador.io/v3alpha1
+kind: TCPMapping
+metadata:
+  name: {{ .Release.Name }}-redis
+  labels:
+    {{- include "platform.labels" . | nindent 4 }}
+spec:
+  port: 6379
+  service: {{ .Release.Name }}-redis:6379
+{{- end }}s

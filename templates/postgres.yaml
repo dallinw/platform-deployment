@@ -1,0 +1,11 @@
+{{ if .Values.postgresql.enabled }}
+apiVersion: getambassador.io/v3alpha1
+kind: TCPMapping
+metadata:
+  name: {{ .Release.Name }}-postgresql
+  labels:
+    {{- include "platform.labels" . | nindent 4 }}
+spec:
+  port: 5432
+  service: {{ .Release.Name }}-postgresql:5432
+{{- end }}
