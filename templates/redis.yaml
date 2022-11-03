@@ -8,4 +8,4 @@ metadata:
 spec:
   port: 6379
   service: {{ .Release.Name }}-redis:6379
-{{- end }}s
+{{- end }}
