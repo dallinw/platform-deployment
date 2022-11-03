@@ -1,2 +1,3 @@
-# platform-deployment
-Helm chart for holistic platform deployment
+# Platform Deployment Helm Chart
+
+TODO: Update Readme

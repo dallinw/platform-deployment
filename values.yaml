@@ -1,0 +1,15 @@
+# Only use a DB stateful set like this in NON PRODUCTION, Productions DBs in Kubernetes are considered bad practice.
+postgresql:
+  enabled: true
+  global:
+    postgresql:
+      auth:
+        # Random default development password
+        postgresPassword: "GFS@wcnzMUR4@kHqWEXFs!!FXQeL"
+  auth:
+    enablePostgresUser: true
+    database: "development"
+
+redis:
+  enabled: true
+  architecture: standalone
